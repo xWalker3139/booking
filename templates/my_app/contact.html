@@ -1,0 +1,73 @@
+{% extends 'my_app/home.html' %}
+
+{% block head_block %}
+<style>
+    .header3{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        color: #fff;
+    }
+    .new_banner4{
+        margin-top: 4rem;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<div class="jumbotron" style="background-color: #2c67f3;">
+    <h1 class="header3">Anunta-ne cu ce te</h1>
+    <h1 class="header3" style="margin-top: 0;">putem ajuta!</h1>
+</div>
+<div class="container">
+    <form class="form-group" method="POST" action="mailto:ask@amdaris.com" style="margin-top: 6rem;">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-lg-6 col-md-4 col-sm-6">
+                <label for="nume">Nume:</label>
+                {{ form.nume }}
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-6">
+                <label for="prenume">Prenume:</label>
+                {{ form.prenume }}
+            </div>
+        </div>
+        <label for="email" style="margin-top: 14px;">Email:</label>
+        {{ form.email }}
+        <label for="telefon" style="margin-top: 14px;">Numar de telefon:</label>
+        {{ form.telefon }}
+        <label for="mesaj" style="margin-top: 14px;">Mesajul tau:</label>
+        {{ form.mesaj }}
+        <br>
+        <input type="submit" value="Trimite un mesaj" class="btn btn-outline-info">
+        <br>
+    </form>
+</div>
+<div class="new_banner4">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.2108548501874!2d21.2265301155308!3d45.766964379105644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4745679b71ff8cb5%3A0x77481254a53e39df!2sPia%C8%9Ba%20Consiliul%20Europei%202%2C%20Timi%C8%99oara%20300627!5e0!3m2!1sro!2sro!4v1653689412218!5m2!1sro!2sro" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<div class="jumbotron" id="jumbotron2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-4 col-sm-6">
+                <h2 class="header5">Contacteaza-ne</h2>
+                <br>
+                <a href="" class="anchor1"><i class="fab fa-facebook"></i> Facebook</a>
+                <br>
+                <a href="" class="anchor1"><i class="fab fa-instagram" style="margin-top: 14px;"></i> Instagram</a>
+                <p class="param4" style="margin-bottom: 0;"><i class="far fa-envelope-open"></i> E-mail:</p>
+                <p class="param4"><i class="fas fa-phone"></i> Numar de telefon: </p>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-6">
+                <h2 class="header5">Despre noi</h2>
+                <p class="param4" style="margin-bottom: 0;">Text aleatoriu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, eveniet optio. Facere quod iste numquam nisi dolorem placeat in commodi non!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" id="jumbotron3">
+    <div class="container">
+        <p class="param5">© Copyright {{date_posted}} - Amdaris.ro - Toate drepturile rezervate</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,400&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/0945a95cb6.js" crossorigin="anonymous"></script>
+    <title>Amdaris</title>
+    {% block head_block %}
+    {% endblock %}
+    <style>
+        #nav1{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 21px;
+            color: #fff;
+            padding-right: 14px;
+            transition: 0.1s ease-in-out;
+        }
+        #nav1:hover{
+            color: #D1D1D1;
+        }
+        #nav2{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 21px;
+            color: #fff;
+            padding-right: 14px;
+            transition: 0.1s ease-in-out;
+        }
+        #nav2:hover{
+            color: #D1D1D1;
+        }
+        #nav3{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 21px;
+            color: #fff;
+            text-align: center;
+            border: 2px solid #fff;
+            border-color: #fff;
+            border-radius: 30px;
+            padding-right: 34px;
+            padding-left: 34px;
+            transition: 0.4s ease-in-out;
+        }
+        #nav3:hover{
+            background-color: #fff;
+            color: #2155CD;
+        }
+        #nav4{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 21px;
+            color: #fff;
+        }
+        #nav5{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 21px;
+            color: #fff;
+            padding-right: 14px;
+            transition: 0.1s ease-in-out;
+        }
+        #nav5:hover{
+            color: #D1D1D1;
+        }
+        .banner{
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgb(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url('https://images.unsplash.com/photo-1610374792793-f016b77ca51a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074');
+            background-position: center;
+            background-size: cover;
+        }
+        .header1{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 54px;
+            text-align: center;
+            color: #fff;
+            padding-top: 13rem;
+        }
+        .form-group{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+        }
+        .new_banner{
+            margin-top: 4rem;
+        }
+        #icon1{
+            font-size: 44px;
+            position: relative;
+            left: 42%;
+            color: #2155CD;
+        }
+        .param1{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 16px;
+        }
+        .param2{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            color: #7d7d7d;
+            text-align: center;
+        }
+        .header2{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            text-align: center;
+        }
+        #hr1{
+            margin-bottom: 3rem;
+            margin-left: 520px;
+            margin-right: 520px;
+            background-color: #000;
+            transition: 0.4s ease-in-out;
+        }
+        .text:hover #hr1{
+            margin-left: 420px;
+            margin-right: 420px;
+        }
+        #card1{
+            padding: 14px 6px 14px 6px;
+            border-bottom: 3px solid #2155CD;
+            transition: 0.4s ease-in-out;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+            margin-top: 14px;
+        }
+        #card1:hover{
+            margin-top: 30px;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 14%), 0 1px 2px rgb(0 0 0 / 30%);
+            border-bottom: 5px solid #2155CD;
+        }
+        .new_banner2{
+            margin-top: 6rem;
+        }
+        .image1{
+            width: 90%;
+            height: 100%;
+        }
+        .param3{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 18px;
+            color: #7d7d7d;
+        }
+        .new_banner3{
+            margin-top: 8rem;
+        }
+        #jumbotron2{
+            background-color: #1F1D36;
+            margin-bottom: 0;
+        }
+        #jumbotron3{
+            margin: 0;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            background-color: #2d2b4b;
+        }
+        .param4{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 20px;
+            color: #fff;
+            padding-top: 10px;
+        }
+        .param5{
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            color: #fff;
+            font-size: 20px;
+        }
+        .anchor1{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: bolder;
+            color: #fff;
+            text-decoration: none;
+        }
+        .header5{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #2155CD;box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}" id="nav4">Amdaris</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}" id="nav1"><i class="fas fa-home"></i> Acasa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'all_desk' %}" id="nav2"><i class="fas fa-search"></i> Birouri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}" id="nav5"><i class="fas fa-headphones"></i> Contact</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contul_meu' user.pk %}" id="nav3">Contul meu</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'inregistrare' %}" id="nav3">Inregistrare</a>
+                    </li>
+                    {% endif %}  
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block body_block %}
+    <div class="banner">
+        <div class="container">
+            <h1 class="header1">IMPREUNA PUTEM REALIZA</h1>
+            <h1 class="header1" style="padding-top: 0;">MAI MULT</h1>
+            <form class="form-group" action="{% url 'cautare_birouri' %}" method="POST" style="margin-top: 6rem;padding-bottom: 10rem;">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <select class="form-control form-control-lg" name="locatie" style="margin-top: 12px;" required>
+                            <option selected disabled>------------</option>
+                            {% for new_data in new_model %}
+                            <option><i class="fas fa-map-marker"></i> {{ new_data.tara }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <input type="date" class="form-control form-control-lg" style="margin-top: 12px;" required>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <input type="submit" value="Cauta" class="btn btn-lg" style="background-color: #2155CD;color: #fff;margin-top: 12px;"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="new_banner">
+        <div class="container">
+            <div class="text">
+                <h1 class="header2">Beneficii</h1>
+                <hr id="hr1">
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card" id="card1">
+                        <i class="fas fa-briefcase" id="icon1"></i>
+                        <p class="param1">Planificarea afacerilor</p>
+                        <p class="param2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas similique ullam quisquam deserunt sit perspiciatis eius non iusto fugit unde.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card" id="card1">
+                        <i class="fas fa-coins" id="icon1"></i>
+                        <p class="param1">Profitabilitate</p>
+                        <p class="param2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas similique ullam quisquam deserunt sit perspiciatis eius non iusto fugit unde.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card" id="card1">
+                        <i class="fas fa-user-friends" id="icon1"></i>
+                        <p class="param1">Comunicare</p>
+                        <p class="param2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas similique ullam quisquam deserunt sit perspiciatis eius non iusto fugit unde.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card" id="card1">
+                        <i class="fas fa-lock" id="icon1"></i>
+                        <p class="param1">Complet securizat</p>
+                        <p class="param2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas similique ullam quisquam deserunt sit perspiciatis eius non iusto fugit unde.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="new_banner2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 col-sm-6">
+                    <img src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/34/2019/03/undraw_destinations_fpv7.png" class="image1">
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-6">
+                    <h2 class="header2" style="text-align:left;">Creste-ti valorile</h2>
+                    <br>
+                    <p class="param3">Text aleatoriu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quos exercitationem soluta deserunt id dolorem commodi tenetur, corporis iste repudiandae sit quas ipsa aliquam porro architecto sequi iusto.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="new_banner3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 col-sm-6">
+                    <h2 class="header2" style="text-align: left;">Viziune optima</h2>
+                    <br>
+                    <p class="param3">Text aleatoriu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolores non dignissimos quisquam vero ipsa, sunt corrupti earum, numquam delectus vel expedita alias fugiat illo, molestias voluptatem! Odit.</p>
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-6">
+                    <img src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/34/2019/03/undraw_social_notifications_ro8o.png" class="image1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="jumbotron" id="jumbotron2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 col-sm-6">
+                    <h2 class="header5">Contacteaza-ne</h2>
+                    <br>
+                    <a href="" class="anchor1"><i class="fab fa-facebook"></i> Facebook</a>
+                    <br>
+                    <a href="" class="anchor1"><i class="fab fa-instagram" style="margin-top: 14px;"></i> Instagram</a>
+                    <p class="param4" style="margin-bottom: 0;"><i class="far fa-envelope-open"></i> E-mail:</p>
+                    <p class="param4"><i class="fas fa-phone"></i> Numar de telefon: </p>
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-6">
+                    <h2 class="header5">Despre noi</h2>
+                    <p class="param4" style="margin-bottom: 0;">Text aleatoriu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, eveniet optio. Facere quod iste numquam nisi dolorem placeat in commodi non!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron" id="jumbotron3">
+        <div class="container">
+            <p class="param5">© Copyright {{date_posted}} - Amdaris.ro - Toate drepturile rezervate</p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

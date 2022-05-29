@@ -1,0 +1,123 @@
+{% extends 'my_app/home.html' %}
+
+{% block head_block %}
+<style>
+    body{
+            height: 1000px;
+            background-color: #E4E9FD;
+            background-image: -webkit-linear-gradient(65deg, #2155CD 50%, #E4E9FD 50%);
+        }
+        #jumbotron1 {
+            max-width: 500px;
+            margin: 140px auto;
+            border-radius: 5px;
+            padding: 25px 25px 25px 25px;
+            box-shadow: 5px 5px 15px -5px rgb(0 0 0 / 30%);
+            background-color: white;
+            margin-bottom: 60px;
+        }
+        #id_password1 {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.75rem + 2px);
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+        #id_password2 {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.75rem + 2px);
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+    .anchor2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        font-size: 22px;
+        text-decoration: none;
+        color: #000;
+        padding-left: 40px;
+    }
+    .param6{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        font-size: 20px;
+        text-align: center;
+        color: #FF8D29;
+        padding-top: 12px;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<div class="box" id="jumbotron1">
+    <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-6">
+            <a href="{% url 'inregistrare' %}" class="anchor2">Inregistrare</a>
+            <hr>
+        </div>
+        <div class="col-lg-6 col-md-4 col-sm-6">
+            <a href="{% url 'my_app:intra_in_cont' %}" class="anchor2">Intra in cont</a>
+            <hr>
+        </div>
+    </div>
+    <br>
+    <form class="form-group" method="POST" action="">
+        {% csrf_token %}
+        <label for="username">Numele tau:</label>
+        {{ form.username }}
+        <label for="email" style="margin-top: 12px;">Email:</label>
+        {{ form.email }}
+        <label for="password1" style="margin-top: 12px;">Parola:</label>
+        {{ form.password1 }}
+        <label for="password2" style="margin-top: 12px;">Verifica-ti parola:</label>
+        {{ form.password2 }}
+        {% for message in messages %}
+        <p class="param6">{{ message }}</p>
+        {% endfor %}
+        <br>
+        <input type="submit" class="btn btn-outline-info btn-block" value="Inregistrare">
+        <br>
+    </form>
+</div>
+<div class="jumbotron" id="jumbotron2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-4 col-sm-6">
+                <h2 class="header5">Contacteaza-ne</h2>
+                <br>
+                <a href="" class="anchor1"><i class="fab fa-facebook"></i> Facebook</a>
+                <br>
+                <a href="" class="anchor1"><i class="fab fa-instagram" style="margin-top: 14px;"></i> Instagram</a>
+                <p class="param4" style="margin-bottom: 0;"><i class="far fa-envelope-open"></i> E-mail:</p>
+                <p class="param4"><i class="fas fa-phone"></i> Numar de telefon: </p>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-6">
+                <h2 class="header5">Despre noi</h2>
+                <p class="param4" style="margin-bottom: 0;">Text aleatoriu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, eveniet optio. Facere quod iste numquam nisi dolorem placeat in commodi non!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" id="jumbotron3">
+    <div class="container">
+        <p class="param5">© Copyright {{date_posted}} - Amdaris.ro - Toate drepturile rezervate</p>
+    </div>
+</div>
+{% endblock %}

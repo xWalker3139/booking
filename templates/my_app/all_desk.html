@@ -1,0 +1,106 @@
+{% extends 'my_app/home.html' %}
+
+{% block head_block %}
+<style>
+    .banner2{
+        width: 100%;
+        height: 24vh;
+        background-image: url("https://www.swaytheme.com/wp-content/uploads/2020/11/dots-shape.png");
+    }
+    #card2{
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+        transition: 0.4s ease-in-out;
+        border-radius: 14px;
+        margin-top: 20px;
+    }
+    #card2:hover{
+        box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 1px 2px rgb(0 0 0 / 36%);
+    }
+    .header3{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    #hr2{
+        margin-left: 520px;
+        margin-right: 520px;
+        transition: 0.4s ease-in-out;
+        margin-bottom: 3rem;
+        background-color: #2155CD;
+    }
+    .text2:hover #hr2{
+        margin-right: 420px;
+        margin-left: 420px;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<div class="jumbotron">
+    <div class="container">
+        <form class="form-group" action="{% url 'cautare_birouri' %}" method="POST">
+            {% csrf_token %}
+            <div class="input-group mb-3 input-group-lg">
+                <select class="form-control" name="locatie" required>
+                    <option selected disabled>------------</option>
+                    {% for new_data in model %}
+                    <option><i class="fas fa-map-marker"></i> {{new_data.tara}} </option>
+                    {% endfor %}
+                </select>
+                <input type="date" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" value="Cauta" class="btn btn-lg" style="background-color: #2155CD;color: #fff;"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="banner3">
+    <div class="container">
+        <div class="text2">
+            <h1 class="header3">Birouri disponibile</h1>
+            <hr id="hr2">
+        </div>
+        <div class="row">
+            {% for data in model %}
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" style="width:100%;" id="card2">
+                    <img src="{{ data.imagine.url }}" style="width: 100%;height: 40vh;" class="card-image-top">
+                    <div class="card-body">
+                      <h4 class="card-title" style="font-family: 'Montserrat', sans-serif;font-weight: bolder;">{{ data.tara }}, {{ data.oras }}</h4>
+                      <a href="{% url 'pag_desk' pk=data.pk %}" class="btn btn-primary">Vezi mai multe</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+    </div>
+</div>
+<br>
+<div class="jumbotron" id="jumbotron2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-4 col-sm-6">
+                <h2 class="header5">Contacteaza-ne</h2>
+                <br>
+                <a href="" class="anchor1"><i class="fab fa-facebook"></i> Facebook</a>
+                <br>
+                <a href="" class="anchor1"><i class="fab fa-instagram" style="margin-top: 14px;"></i> Instagram</a>
+                <p class="param4" style="margin-bottom: 0;"><i class="far fa-envelope-open"></i> E-mail:</p>
+                <p class="param4"><i class="fas fa-phone"></i> Numar de telefon: </p>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-6">
+                <h2 class="header5">Despre noi</h2>
+                <p class="param4" style="margin-bottom: 0;">Text aleatoriu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, eveniet optio. Facere quod iste numquam nisi dolorem placeat in commodi non!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" id="jumbotron3">
+    <div class="container">
+        <p class="param5">© Copyright {{date_posted}} - Amdaris.ro - Toate drepturile rezervate</p>
+    </div>
+</div>
+{% endblock %}
